@@ -40,13 +40,15 @@ def signup(request):
         })
 
 def tasks(request):
-    tasks = Task.objects.filter(user=request.user, datecompleted_isnull=True)
-    return render(request, 'tasks.html',{'tasks': tasks}) 
+    tasks = Task.objects.filter(user=request.user, datecompleted__isnull=True)
+    return render(request, 'tasks.html', {
+        'tasks': tasks
+    })
 
 def create_task(request):
 
    if request.method == 'GET': 
-      return render(request, 'crate_task.html',{
+      return render(request, 'create_task.html',{
         'form': TaskForm
     })
    else:
@@ -57,7 +59,7 @@ def create_task(request):
             new_task.save()
             return redirect('tasks')
         except ValueError:
-            return render(request, 'crate_task.html',{
+            return render(request, 'create_task.html',{
                 'form': TaskForm,
                  'error': 'Please provide valida data'
             })
