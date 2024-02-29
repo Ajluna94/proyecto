@@ -1,16 +1,31 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Create task</h1>
 
-{{error}}
+<main class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 mt-5">
+             
 
-<form method="POST">
-    {% csrf_token %}
-    {{form}}
-    <button>
-        Save
-    </button>
+            <form action="/tasks/create/" method="POST" class="card card-body">
+
+                <h1>Create task</h1>
+
+                {{error}}
+
+                     {% csrf_token %}
+
+                     {{form}}
+                      <button class="btn btn-dark">
+                           Save
+                      </button>
     
-</form>
+            </form>
+
+        </div>
+
+    </div>
+
+
+</main>
 {% endblock %}

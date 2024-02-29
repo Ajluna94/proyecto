@@ -1,16 +1,33 @@
  {% extends 'base.html' %}
  
  {% block content %}
- <h1>Home</h1>
- <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-    Laudantium, adipisci. Ea repudiandae adipisci beatae doloremque?
-     Consequuntur et suscipit nemo ducimus distinctio excepturi. Minima
-      fugiat reprehenderit provident veniam nihil possimus eligendi impedit
+
+ <main class="container py-5">
+   <section class="card card-body">
+      <h1 class="display-1 text-center" >Django app</h1>
+      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+       Laudantium, adipisci. Ea repudiandae adipisci beatae doloremque?
+       Consequuntur et suscipit nemo ducimus distinctio excepturi. Minima
+       fugiat reprehenderit provident veniam nihil possimus eligendi impedit
        mollitia nam odit. Illo, blanditiis aliquam cumque fugit molestias
-        odio eum accusamus omnis laboriosam magnam! Voluptates mollitia 
-        officia totam voluptatibus ipsa rerum vero itaque eum culpa, maiores
-         dolore repudiandae, expedita, sed nam libero! Culpa dolorem fugiat
-          quae impedit recusandae dicta doloremque provident quas odit,
-           repellendus laboriosam beatae nisi. Est itaque nemo debitis unde
-            eius tempore aspernatur molestias nihil? Cupiditate officiis error unde commodi perferendis reiciendis dolorum rerum iure modi.</p>
+       odio eum accusamus omnis laboriosam magnam! Voluptates mollitia 
+       officia totam voluptatibus ipsa rerum vero itaque eum culpa, maiores
+       dolore repudiandae, expedita, sed nam libero! Culpa dolorem fugiat
+       quae impedit recusandae dicta doloremque provident quas odit,
+       repellendus laboriosam beatae nisi. Est itaque nemo debitis unde
+       eius tempore aspernatur molestias nihil? Cupiditate officiis error unde
+       commodi perferendis reiciendis dolorum rerum iure modi.</p>
+
+       <div class="text-center">
+         <a class="btn btn-secondary" href="/signin/">
+            signin
+          </a>
+          <a class="btn btn-dark" href="/signup/">
+            signin
+          </a>
+       </div>
+
+    </section>
+ </main>
+ 
  {% endblock %}
